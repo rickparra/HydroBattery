@@ -1,0 +1,67 @@
+## Arquivos e pastas ignorados para projetos C#
+
+# Arquivos de build
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+# Arquivos de Visual Studio
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+*.pfx
+*.publishsettings
+orleans.codegen.cs
+
+# Arquivos de ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Arquivos de TeamCity
+_TeamCity*
+
+# Arquivos de DotCover
+*.dotCover
+
+# Arquivos de Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Arquivos de NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+nupkg/
+
+# Arquivos de cobertura de código
+*.coverage
+*.coveragexml
+
+# Arquivos de teste
+TestResults/
+[Tt]est[Rr]esult*/ 

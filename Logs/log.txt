@@ -1,0 +1,6 @@
+2025-05-31 15:31:53 | LoginFalhou | Tentativa: a
+2025-05-31 15:31:55 | LoginFalhou | Tentativa: s
+2025-05-31 15:32:10 | LoginSucesso | Usuário: admin
+2025-05-31 15:37:03 | LoginSucesso | Usuário: admin
+2025-05-31 15:37:11 | GerarRelatorio | Tipo: 3
+2025-05-31 15:38:01 | GerarRelatorio | Tipo: 1
