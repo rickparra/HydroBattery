@@ -2,6 +2,16 @@
 
 Sistema desenvolvido em C# para gerenciamento e monitoramento de falhas de energia em data centers e instalações críticas.
 
+## Objetivo do Projeto
+
+O HydroBattery tem como objetivo principal fornecer uma solução robusta e confiável para o gerenciamento de falhas de energia em instalações críticas, permitindo:
+
+- Monitoramento em tempo real de falhas de energia
+- Rastreamento de impactos financeiros e operacionais
+- Geração de relatórios detalhados para análise
+- Notificação imediata de eventos críticos
+- Gestão eficiente de recursos técnicos
+
 ## Funcionalidades
 
 - Autenticação de usuários com diferentes níveis de acesso
@@ -10,6 +20,150 @@ Sistema desenvolvido em C# para gerenciamento e monitoramento de falhas de energ
 - Exportação de dados para CSV
 - Sistema de logs e notificações
 - Cálculo de impactos financeiros e de usuários
+
+## Requisitos Funcionais
+
+1. **Autenticação e Autorização**
+   - Login com diferentes níveis de acesso (Admin, Técnico, Usuário)
+   - Gerenciamento de permissões por nível
+   - Recuperação de senha
+   - Registro de atividades de usuário
+
+2. **Gestão de Falhas**
+   - Cadastro de novas falhas
+   - Atualização de status
+   - Registro de ações corretivas
+   - Categorização de falhas
+   - Priorização automática
+
+3. **Monitoramento**
+   - Dashboard em tempo real
+   - Alertas configuráveis
+   - Histórico de eventos
+   - Indicadores de performance
+
+4. **Relatórios**
+   - Geração de relatórios personalizados
+   - Exportação em múltiplos formatos
+   - Gráficos e estatísticas
+   - Análise de tendências
+
+## Requisitos Não Funcionais
+
+1. **Performance**
+   - Tempo de resposta < 2 segundos
+   - Suporte a múltiplos usuários simultâneos
+   - Processamento assíncrono de relatórios
+
+2. **Segurança**
+   - Criptografia de dados sensíveis
+   - Proteção contra ataques comuns
+   - Logs de auditoria
+   - Backup automático
+
+3. **Usabilidade**
+   - Interface intuitiva
+   - Responsividade
+   - Acessibilidade
+   - Documentação completa
+
+4. **Manutenibilidade**
+   - Código modular
+   - Testes automatizados
+   - Documentação técnica
+   - Versionamento
+
+## Tecnologias Utilizadas
+
+- **Backend**
+  - .NET 8.0
+  - C# 12.0
+  - Entity Framework Core
+  - SQL Server
+
+- **Frontend**
+  - ASP.NET Core MVC
+  - Bootstrap 5
+  - JavaScript/TypeScript
+  - Chart.js
+
+- **Ferramentas de Desenvolvimento**
+  - Visual Studio 2022
+  - Git
+  - Azure DevOps
+  - xUnit (Testes)
+
+## Regras de Negócio
+
+1. **Gestão de Falhas**
+   - Falhas críticas devem ser notificadas imediatamente
+   - Cada falha deve ter um responsável designado
+   - Falhas não podem ser fechadas sem descrição da solução
+   - SLA máximo de 4 horas para falhas críticas
+
+2. **Cálculos e Métricas**
+   - Impacto financeiro = (Tempo de falha * Custo por hora)
+   - Impacto em usuários = (Tempo de falha * Usuários afetados)
+   - Prioridade = (Gravidade * Urgência * Impacto)
+
+3. **Notificações**
+   - Níveis: INFO, ALERTA, ERRO, CRÍTICO, SUCESSO
+   - Canais: Console, Email, SMS (para críticos)
+   - Agendamento de notificações recorrentes
+
+4. **Relatórios**
+   - Geração diária automática
+   - Retenção de 12 meses
+   - Exportação em CSV e PDF
+   - Validação de dados antes da exportação
+
+## Fluxogramas
+
+### Fluxo de Autenticação
+```mermaid
+graph TD
+    A[Início] --> B[Usuário acessa sistema]
+    B --> C{Login válido?}
+    C -->|Não| D[Exibe erro]
+    D --> B
+    C -->|Sim| E[Verifica permissões]
+    E --> F[Redireciona para dashboard]
+```
+
+### Fluxo de Registro de Falha
+```mermaid
+graph TD
+    A[Início] --> B[Usuário registra falha]
+    B --> C{Validação de dados}
+    C -->|Inválido| D[Exibe erros]
+    D --> B
+    C -->|Válido| E[Classifica prioridade]
+    E --> F[Notifica responsáveis]
+    F --> G[Atualiza dashboard]
+```
+
+### Fluxo de Notificação
+```mermaid
+graph TD
+    A[Falha detectada] --> B{É crítica?}
+    B -->|Sim| C[Notificação imediata]
+    C --> D[SMS + Email]
+    B -->|Não| E[Notificação normal]
+    E --> F[Email]
+    D --> G[Atualiza status]
+    F --> G
+```
+
+### Fluxo de Geração de Relatório
+```mermaid
+graph TD
+    A[Início] --> B[Seleciona período]
+    B --> C[Coleta dados]
+    C --> D[Processa métricas]
+    D --> E[Gera relatório]
+    E --> F[Exporta formato]
+    F --> G[Notifica usuário]
+```
 
 ## Requisitos
 
