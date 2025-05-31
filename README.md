@@ -12,21 +12,11 @@ O HydroBattery tem como objetivo principal fornecer uma solução robusta e conf
 - Notificação imediata de eventos críticos
 - Gestão eficiente de recursos técnicos
 
-## Funcionalidades
-
-- Autenticação de usuários com diferentes níveis de acesso
-- Cadastro e gerenciamento de falhas de energia
-- Geração de relatórios detalhados
-- Exportação de dados para CSV
-- Sistema de logs e notificações
-- Cálculo de impactos financeiros e de usuários
-
 ## Requisitos Funcionais
 
 1. **Autenticação e Autorização**
    - Login com diferentes níveis de acesso (Admin, Técnico, Usuário)
    - Gerenciamento de permissões por nível
-   - Recuperação de senha
    - Registro de atividades de usuário
 
 2. **Gestão de Falhas**
@@ -40,12 +30,10 @@ O HydroBattery tem como objetivo principal fornecer uma solução robusta e conf
    - Dashboard em tempo real
    - Alertas configuráveis
    - Histórico de eventos
-   - Indicadores de performance
 
 4. **Relatórios**
    - Geração de relatórios personalizados
-   - Exportação em múltiplos formatos
-   - Gráficos e estatísticas
+   - Exportação em CSV
    - Análise de tendências
 
 ## Requisitos Não Funcionais
@@ -53,45 +41,29 @@ O HydroBattery tem como objetivo principal fornecer uma solução robusta e conf
 1. **Performance**
    - Tempo de resposta < 2 segundos
    - Suporte a múltiplos usuários simultâneos
-   - Processamento assíncrono de relatórios
 
 2. **Segurança**
-   - Criptografia de dados sensíveis
-   - Proteção contra ataques comuns
    - Logs de auditoria
    - Backup automático
 
 3. **Usabilidade**
    - Interface intuitiva
-   - Responsividade
-   - Acessibilidade
    - Documentação completa
 
 4. **Manutenibilidade**
    - Código modular
    - Testes automatizados
    - Documentação técnica
-   - Versionamento
 
 ## Tecnologias Utilizadas
 
 - **Backend**
-  - .NET 8.0
+  - .NET 9.0
   - C# 12.0
-  - Entity Framework Core
-  - SQL Server
-
-- **Frontend**
-  - ASP.NET Core MVC
-  - Bootstrap 5
-  - JavaScript/TypeScript
-  - Chart.js
 
 - **Ferramentas de Desenvolvimento**
   - Visual Studio 2022
   - Git
-  - Azure DevOps
-  - xUnit (Testes)
 
 ## Regras de Negócio
 
@@ -108,13 +80,13 @@ O HydroBattery tem como objetivo principal fornecer uma solução robusta e conf
 
 3. **Notificações**
    - Níveis: INFO, ALERTA, ERRO, CRÍTICO, SUCESSO
-   - Canais: Console, Email, SMS (para críticos)
+   - Canais: Console, Email
    - Agendamento de notificações recorrentes
 
 4. **Relatórios**
    - Geração diária automática
    - Retenção de 12 meses
-   - Exportação em CSV e PDF
+   - Exportação em CSV
    - Validação de dados antes da exportação
 
 ## Fluxogramas
@@ -147,7 +119,7 @@ graph TD
 graph TD
     A[Falha detectada] --> B{É crítica?}
     B -->|Sim| C[Notificação imediata]
-    C --> D[SMS + Email]
+    C --> D[Email]
     B -->|Não| E[Notificação normal]
     E --> F[Email]
     D --> G[Atualiza status]
@@ -161,13 +133,13 @@ graph TD
     B --> C[Coleta dados]
     C --> D[Processa métricas]
     D --> E[Gera relatório]
-    E --> F[Exporta formato]
+    E --> F[Exporta CSV]
     F --> G[Notifica usuário]
 ```
 
 ## Requisitos
 
-- .NET 8.0 SDK
+- .NET 9.0 SDK
 - Visual Studio 2022 ou VS Code
 
 ## Como Executar
