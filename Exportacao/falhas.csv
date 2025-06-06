@@ -1,3 +1,2 @@
 ID,Data Início,Data Fim,Local,Descrição,Tipo,Status,Impacto Usuários,Impacto Financeiro
 1,2025-04-01 13:10:00,2025-04-01 13:45:00,"fiap","queda de energia","Falha Elétrica","Em Análise",10,3505,00
-2,2025-06-05 21:21:49,2025-06-05 22:21:49,"Data Center A","Falha de energia","Falha Elétrica","Em Análise",100,6050,00

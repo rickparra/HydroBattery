@@ -1,3 +1,0 @@
-ID,DataInicio,DataFim,Local,Descricao,TipoFalha,ImpactoUsuarios,Status,ImpactoFinanceiro,AlertaCritico
-1,2025-05-31 14:51:33,2025-05-31 15:51:33,Data Center Principal,Falha no sistema de backup,1,1500,Em Análise,0,True
-2,2025-05-30 15:51:33,2025-05-30 17:51:33,Data Center Secundário,Falha na rede,2,500,Em Análise,0,True

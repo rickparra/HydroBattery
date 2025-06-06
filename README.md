@@ -1,5 +1,11 @@
 # HydroBattery - Sistema de Gerenciamento de Falhas de Energia
 
+## Colaboradores
+
+- [Henrique Parra](https://github.com/usuario1)
+- [Tony Willian](https://github.com/TonyWillianFIAP)
+- [Roberto Oliveira](https://github.com/Robertooan07)
+
 Sistema desenvolvido em C# para gerenciamento e monitoramento de falhas de energia em data centers e instalações críticas.
 
 ## Objetivo do Projeto
@@ -247,4 +253,4 @@ Ao executar os testes, o sistema gera um relatório detalhado que inclui:
 
 ## Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes. 
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
